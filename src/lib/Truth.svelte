@@ -37,7 +37,7 @@
 	}
 </script>
 
-<hr />
+<div class="container">
 <button on:click={getResult}>Get Result!</button>
 {#if error}
 	<p>{error}</p>
@@ -62,3 +62,57 @@
 		</tbody>
 	</table>
 {/if}
+</div>
+<style>
+	button {
+		
+	width: 25vw;
+	height: 5rem;
+	margin-top: 2rem;
+	background: #C75D69;
+	border: none;
+	border-radius: 34px;
+	font-family: 'Darker Grotesque' sans-serif;
+	font-size: 1.4rem;
+	color: white;
+
+	}
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100vw;
+	flex-direction: column;
+}
+
+table {
+	background-color: #2b2c36; 
+	width: 75vw;
+}
+
+p {
+	font-family: 'Darker Grotesque', monospace;
+	font-size: 1.2rem;
+	color: white;
+}
+@media(max-width: 320px) {
+	button {
+	width: 55vw;
+	height: 2.5rem;
+	margin-top: 2rem;
+	background: #C75D69;
+	border: none;
+	border-radius: 34px;
+	font-family: 'Darker Grotesque' sans-serif;
+	font-size: 1.4rem;
+	color: white;
+
+	}
+}
+@media(max-width: 375px) {
+	button {
+		width: fit-content;
+	}
+}
+</style>
+
